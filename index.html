@@ -1,31 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aloide</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Vamos a estudiar !</title>
+    <!-- Fluid viewport -->
+    <!-- Centered viewport -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="color-scheme" content="light dark">
+
 </head>
+
 <body>
-    
-    <h1>Aloide</h1>
 
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="https://picsum.photos/250" class="card-img" alt="random image">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">The page of Aloide</h5>
-              <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure labore blanditiis doloribus eius officia veritatis fuga tempore tenetur quisquam. Repudiandae rerum distinctio deleniti! Excepturi ea nesciunt labore dolores sapiente vel.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-    
 
-</body>
+    <body>
+        <nav class="container" id="header">
+            <ul>
+                <li class="header-title"><strong>@aloide</strong></li>
+                <li><a href="#" onclick="showSection('home')">Ver posts</a></li>
+                <!--<li><a href="#" onclick="showSection('write')">Write</a></li>-->
+                <li><a href="#" onclick="showSection('profile')">Perfil</a></li>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <!-- Home Section -->
+            <section id="home-section">
+                <h1>Últimos post</h1>
+                <div id="posts-container" class="post-grid">
+                </div>
+            </section>
+
+
+
+            <!-- Profile Section -->
+            <section id="profile-section" style="display:none;">
+                <h2>Ale Molina - a.k.a Alito</h2>
+                <div class="author-profile">
+                    <img class="author-profile-img"
+                        src="https://gravatar.com/userimage/195745082/bb29a901885d0401ffc2cecfaa466e29.jpeg?size=512"
+                        alt="Profile Picture">
+                    <div>
+                        <h3></h3>
+                        <p>Estudiante avanzado de Ingenieria en sistemas en Universidad Técnica Nacional, Facultad Regional Córdoba, Argentina</p>
+                        <p>Programador con especialización en desarrollo backend, creación de APIs y aplicaciones web basadas en el modelo MVC, utilizando tecnologías como .NET, Java y JavaScript.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <small class="footer-small">
+                Realizado con dedicación - @aloide <span id="current-year"></span>
+            </small>  
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+
 </html>

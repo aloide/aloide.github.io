@@ -5,6 +5,16 @@
         "description":"Referencia útil para desarrolladores que buscan recordar comandos específicos o que desean migrar de un gestor a otro, destacando las similitudes y diferencias clave entre ambos",
         "date":"28 de Marzo, 2025",
         "tags":["web", "programming", "technology", "node"],
-        "filename":"/posts/280320251510.md"
+        "filename":"/posts/280320251510.md",
+        "see_more":[280320252201]
+    },
+    {
+        "id": 280320252201,
+        "title":"Datos curiosos sobre Npm y Node Js",
+        "description":"Descubre 5 datos curiosos sobre estas tecnologías que todo desarrollador debería conocer.",
+        "date":"28 de Marzo, 2025",
+        "tags":["web", "programming", "node"],
+        "filename":"/posts/280320252201.md",
+        "see_more":[]
     }
 ]

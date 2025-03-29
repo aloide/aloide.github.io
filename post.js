@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Actualizar el título con los datos del JSON
             document.getElementsByTagName('title')[0].innerHTML = `@aloide - ${post.title}`;
 
+            // Renderizar posts relacionados si existen
+            if (post.see_more && post.see_more.length > 0) {
+                const relatedPosts = posts.filter(p => post.see_more.includes(p.id));
+                renderRelatedPosts(relatedPosts);
+            } else {
+                document.getElementById('related-posts').style.display = 'none';
+            }
+
             // Luego cargar el contenido del markdown
             return fetch(`./posts/${postId}.md`);
         })
@@ -30,4 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Actualizar el año en el footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
-}); 
+});
+
+function renderRelatedPosts(relatedPosts) {
+    const container = document.getElementById('related-posts-container');
+    container.innerHTML = relatedPosts.map(post => `
+        <article class="related-post-card">
+            <h4><a href="post.html?id=${post.id}">${post.title}</a></h4>
+            <p>${post.description}</p>
+            <small><i>${post.date}</i></small>
+        </article>
+    `).join('');
+} 
